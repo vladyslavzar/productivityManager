@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0;
 }
+html{
+  width: 100vmax !important;
+}
 
 body {
   margin: 0;
@@ -62,6 +65,7 @@ h6{
   width: 100%;
   margin: 0 auto;
   border-radius: 30px;
+  padding: 0 15px;
 }
 .header{
   margin-bottom: 70px;
@@ -79,11 +83,14 @@ h6{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    flex-wrap: wrap;
     &__easy{
       display: flex;
-      max-width: 800px;
+      max-width: 1000px;
       width: 100%;
       justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
       &__item{
         color: #FFFFFF;
         max-width: 80px;
