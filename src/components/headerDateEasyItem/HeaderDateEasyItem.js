@@ -17,7 +17,7 @@ const HeaderDateEasyItem = (props) => {
     let seconddasmda= props.date.slice(5);
 
     return (
-        <div className={fullfulldate === `${seconddasmda}` ? "header__calendar__easy__item header__calendar__easy__item__active" : "header__calendar__easy__item"}onClick={setDateOnClick}>
+        <div tabIndex='1' className={fullfulldate === `${seconddasmda}` ? "header__calendar__easy__item header__calendar__easy__item__active" : "header__calendar__easy__item"}onClick={setDateOnClick}>
             <div>
                 <span>{props.num}</span>
                 <p onClick={() => {console.log(props.day)}}>{actuallDay}</p>
