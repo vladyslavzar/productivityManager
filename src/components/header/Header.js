@@ -34,7 +34,7 @@ const Header = (props) => {
 
 
         return (
-            <HeaderDateEasyItem date={props.date} setDate={props.setDate} num={item} key={i} day={(day + i - 1)} fullDate={date.getFullYear()+'-'+(month)+'-'+(days)} />
+            <HeaderDateEasyItem tabIndex='1' date={props.date} setDate={props.setDate} num={item} key={i} day={(day + i - 1)} fullDate={date.getFullYear()+'-'+(month)+'-'+(days)} />
         ) 
     })
     
