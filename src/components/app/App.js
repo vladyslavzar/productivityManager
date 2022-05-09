@@ -15,7 +15,6 @@ const App = () => {
   const loadTasks = () => {
     const taskInfo = myStorage.getItem(`${date}`);
 
-    console.log(taskInfo, 'loading... tasks', date);
 
     if (!taskInfo){
       setView(null);
@@ -32,7 +31,6 @@ const App = () => {
 
     let view;
 
-    console.log(arrOfPoses, 'arrodposes', taskInfo);
     
 
     view = arrOfPoses.map((item, i) => {
@@ -54,7 +52,6 @@ const App = () => {
     const time = itemInfo.slice(0, itemInfo.indexOf('-'));
 
     view.unshift(<Task title={title} time={time} date={date} setUpdateOnAdd={setUpdateOnAdd} updateOnAdd={updateOnAdd} key={0}/>)
-    console.log(view[0].props, 'props');
 
     view.sort((a, b) => {
       let oldTimeForrmated = +a.props.time.slice(0, 2)*60+a.props.time.slice(3);
@@ -64,7 +61,6 @@ const App = () => {
     });
 
     setView(view);
-    console.log(view, 'viewview');
   }
  
 

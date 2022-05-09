@@ -10,19 +10,17 @@ const TaskAdd = (props) => {
     let counter = 0;
 
     const onTaskAdd = () => {
-        if (!titleVal || !timeVal) return;
+        if (!titleVal || !timeVal || titleVal.indexOf(',') !== -1 ) return;
 
         const doesExist = localStorage.getItem(`${props.date}`);
 
         
 
         if (doesExist) {
-            console.log('true');
             myStorage.setItem(`${props.date}`, `${doesExist},${timeVal}-${titleVal}`);
 
             counter+=1
 
-            console.log(counter, '--------------------------counter-------------------------');
     
             props.setUpdateOnAdd(!props.updateOnAdd);
 
@@ -33,11 +31,7 @@ const TaskAdd = (props) => {
 
         counter+=1
 
-        console.log(counter, '--------------------------counter-------------------------');
-
         props.setUpdateOnAdd(!props.updateOnAdd);
-
-        console.log(props.updateOnAdd, 'daskdsaijdsaikjdsaikjdsaijdsadasjiundsuhandsuahdbshuabd');
 
         
     }
